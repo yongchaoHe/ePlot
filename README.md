@@ -3,6 +3,9 @@
 ### Summary
 `ePlot` is a plotting library over matplotlib that was designed for easing the procedure when plotting figures with python.  
 
+### Example
+![bar](./example/line_demo_1.pdf)
+
 ### Prerequisites
 * python 3.9 or higher
 * pip3
