@@ -21,7 +21,7 @@
 # #
 
 class axis:
-    def __init__(self, ax_label, ax_min, ax_max, ax_ticks, ax_ticklabels, ax_scale="linear", ax_figname=""):
+    def __init__(self, ax_label, ax_min, ax_max, ax_ticks, ax_ticklabels, ax_scale="linear", ax_figname="", ax_rotation=0):
         self.label      = ax_label
         self.min        = ax_min
         self.max        = ax_max
@@ -29,3 +29,4 @@ class axis:
         self.ticklabels = ax_ticklabels
         self.scale      = ax_scale
         self.figname    = ax_figname
+        self.rotation   = ax_rotation

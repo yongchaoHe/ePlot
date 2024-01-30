@@ -117,7 +117,7 @@ class Figure:
             ax.set_xlabel(x_axis.label)
         ax.set_xlim(x_axis.min, x_axis.max)
         ax.set_xticks(x_axis.ticks)
-        # ax.set_xticklabels(x_axis.ticklabels, rotation=45)
+        ax.set_xticklabels(x_axis.ticklabels, rotation=x_axis.rotation)
         ax.set_xticklabels(x_axis.ticklabels)
         ax.set_ylabel(y_axis.label)
         ax.set_ylim(y_axis.min, y_axis.max)
@@ -246,8 +246,8 @@ class Figure:
                         plot_func = plot_func + "[item[0] for item in sub_data[line_loop][2]], yerr=[item[1] for item in sub_data[line_loop][2]], ecolor=colors[line_loop%len(colors)], bottom=[item[0] for item in sub_data[line_loop][1]], "
                     else:
                         plot_func = plot_func + "sub_data[line_loop][2], bottom=sub_data[line_loop][1], "
-                    # if use_hatch == True:
-                    #     plot_func = plot_func + "hatch=hatches[line_loop%len(hatches)], "
+                    if use_hatch == True:
+                        plot_func = plot_func + "hatch=hatches[line_loop%len(hatches)], "
                     # if self.share_legend == False:
                     #     plot_func = plot_func + "label=self.legends[loop][line_loop], "
                     plot_func = plot_func + "width=width-" + str(edge) + ", edgecolor=colors[line_loop%len(colors)], color='white', alpha=self.alpha)"
